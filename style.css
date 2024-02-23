@@ -123,7 +123,7 @@ nav .nav_elements a {
   /* color: black; */
   color: #d3c1e7;
   text-decoration: none;
-  font-family: "HeliosRegular", Arial, sans-serif !important;
+  font-family: "HeliosRegular" !important;
 
 
 }
@@ -217,7 +217,7 @@ model-viewer {
   margin: 1em 0em;
   background-color: rgba(10, 4, 35, 0.5);
   backdrop-filter: blur(8px);
-  font-family: "HeliosRegular", Arial, sans-serif;
+  font-family: "HeliosRegular" !important;
   transition: all 0.4s ease-in-out;
 }
 
@@ -225,7 +225,7 @@ model-viewer {
 .go_session2 h1,
 .docker_session1 h1,
 .docker_session2 h1 {
-  font-family: "HeliosRegular", Arial, sans-serif;
+  font-family: "HeliosRegular" !important;
   font-size: 3em;
   color: #d3c1e7;
 }
@@ -303,7 +303,7 @@ model-viewer {
     justify-content: center;
     font-weight: 900;
     font-size: 10vw;
-    font-family: 'Blackpast', sans-serif;
+    font-family: 'Blackpast' !important;
     
   }
 
