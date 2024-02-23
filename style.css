@@ -28,7 +28,7 @@
 }
 @font-face {
   font-family: "HeliosRegular";
-  src: url("/helios-regular.ttf") format("truetype");
+  src: url("./fonts/helios-regular.ttf") format("truetype");
   font-weight: normal;
     font-style: normal;
   /* You can also provide other font formats for better browser compatibility */
