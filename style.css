@@ -10,7 +10,22 @@
   font-weight: normal;
   font-style: normal;
 }
+.go_session1,
+.go_session2 {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: slideIn 1s forwards;
+}
 
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 @font-face {
   font-family: "HeliosRegular";
   src: url("/helios-regular.ttf") format("truetype");
@@ -108,7 +123,7 @@ nav .nav_elements a {
   /* color: black; */
   color: #d3c1e7;
   text-decoration: none;
-  font-family: "HeliosRegular", Arial, sans-serif;
+  font-family: "HeliosRegular", Arial, sans-serif !important;
 
 
 }
@@ -286,16 +301,17 @@ model-viewer {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    font-size: 3em;
     font-weight: 900;
+    font-size: 10vw;
     font-family: 'Blackpast', sans-serif;
     
   }
+
   .club_name{
-    font-size: 1.5em;
+    font-size: 4vw;
   }
   .presents{
-    font-size: 1em;
+    font-size: 3vw;
   }
 
 
