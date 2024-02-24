@@ -18,14 +18,17 @@
   <script src="script.js" defer></script>
   <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
   <script>
+   window.onload = function () {
 
-    window.onload = function () {
-      updateQRCode();
-    };
-    function defaultQrcode() {
-      var bothQR = document.getElementById("bothQR");
-      bothQR.style.display = "block";
-    }
+   
+   var technologyDropdown = document.getElementById("technology");
+   technologyDropdown.value = "both";
+
+
+   updateQRCode();
+   };
+
+   
     function updateQRCode() {
       var technologyDropdown = document.getElementById("technology");
       var golangQR = document.getElementById("golangQR");
