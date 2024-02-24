@@ -739,6 +739,7 @@ input::file-selector-button:hover {
   position: relative;
   z-index: 10000000000000;
   background-color: rgba(10, 4, 35, 2);
+  max-height: 20%;
 }
 
 .logo-icon-container {
