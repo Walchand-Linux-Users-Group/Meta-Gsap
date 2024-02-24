@@ -53,6 +53,7 @@
   </head>
 
   <body>
+    <img class="wlug-logo-purple" src="./wlug-purple-logo.png" alt="WLUG Logo"/>
     <div class="bg-image">
       <div class="header" id="home">
         <p class="club_name">Walchand Linux Users' Group</p>
@@ -61,7 +62,6 @@
         <p>2k24</p>
       </div>
       <img src="./bgg.png" alt="bg-image">
-      <video src="./"></video>
     </div>
     <nav>
       <div class="nav_elements">
@@ -109,47 +109,7 @@
     </nav>
     <div class="containers">
       
-      <div class="go_container" id="go">
-        <model-viewer
-          id="go-model"
-          src="Gopher.glb"
-          alt="A 3D model of a car"
-          shadow-intensity="1"
-          camera-controls
-          auto-rotate
-          disable-zoom
-          ar
-        >
-        </model-viewer>
-        <div class="go_session">
-          <div class="go_session1">
-            <h1>Session 1:<br> Let’s Gopher it!</h1>
-            <p>
-              There are a ton of programming languages available! There are so
-              many factors to think about. However, there is a language that
-              everyone should know: GoLang! In this session, we’ll start with
-              this open-source language developed by Google that is currently
-              widely used in the industry and is renowned for its speed,
-              concurrency management, and easy-to-understand syntax. Excited
-              about this new journey and building something mindblowing? Well,
-              let's gopher it!
-            </p>
-          </div>
-          <div class="go_session2">
-            <h1>Session 2:<br> Go Next Level</h1>
-            <p>
-              The base has been built. Weapons have been equipped. Now, with the
-              knowledge of handling this powerful language, in this session,
-              we’ll move towards a very crucial and advanced concept which is
-              concurrency, and ultimately build a project in GoLang. GoLang
-              being cross-platform handles concurrency smoothly like butter.
-              This makes it best suited for developing applications that can
-              handle heavy traffic. Want to know how? We’ll learn about it in
-              this session and Go Next Level!
-            </p>
-          </div>
-        </div>
-      </div>
+      
       <div class="docker_container" id="dockerCont">
         <div class="docker_session">
           <div class="docker_session1">
@@ -192,6 +152,47 @@
         >
         </model-viewer>
       </div>
+      <div class="go_container" id="go">
+        <model-viewer
+          id="go-model"
+          src="Gopher.glb"
+          alt="A 3D model of a car"
+          shadow-intensity="1"
+          camera-controls
+          auto-rotate
+          disable-zoom
+          ar
+        >
+        </model-viewer>
+        <div class="go_session">
+          <div class="go_session1">
+            <h1>Session 1:<br> Let’s Gopher it!</h1>
+            <p>
+              There are a ton of programming languages available! There are so
+              many factors to think about. However, there is a language that
+              everyone should know: GoLang! In this session, we’ll start with
+              this open-source language developed by Google that is currently
+              widely used in the industry and is renowned for its speed,
+              concurrency management, and easy-to-understand syntax. Excited
+              about this new journey and building something mindblowing? Well,
+              let's gopher it!
+            </p>
+          </div>
+          <div class="go_session2">
+            <h1>Session 2:<br> Go Next Level</h1>
+            <p>
+              The base has been built. Weapons have been equipped. Now, with the
+              knowledge of handling this powerful language, in this session,
+              we’ll move towards a very crucial and advanced concept which is
+              concurrency, and ultimately build a project in GoLang. GoLang
+              being cross-platform handles concurrency smoothly like butter.
+              This makes it best suited for developing applications that can
+              handle heavy traffic. Want to know how? We’ll learn about it in
+              this session and Go Next Level!
+            </p>
+          </div>
+        </div>
+      </div>
       <div class="register" id="register">
         <div class="container glass flex">
           <h1 class="main">Registration Form</h1>
@@ -221,9 +222,9 @@
   
                   <label for="technology" class="text">Which technology do you want to master?</label>
                   <select id="technology" name="technology" required class="box1" onchange="updateQRCode()">
+                      <option value="both" class="opt">Both</option>
                       <option value="docker" class="opt">Docker</option>
                       <option value="golang" class="opt">GoLang</option>
-                      <option value="both" class="opt">Both</option>
                   </select>
                   
                   </select>

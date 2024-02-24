@@ -17,6 +17,13 @@
   overflow: hidden;
   animation: slideIn 1s forwards;
 }
+.wlug-logo-purple{
+  width: 10%;
+  right: 0;
+  top: 0;
+  z-index: 10000000;
+  position: absolute;
+}
 
 @keyframes slideIn {
   from {
@@ -36,13 +43,15 @@
 
 body {
   /* background: rgba(35, 4, 57,0.5); */
-  /* background: linear-gradient(90deg, rgba(35, 4, 57, 1) 0%, rgba(79, 22, 121, 1) 52%, rgba(57, 5, 75, 1) 100%); */
+  background: linear-gradient(90deg, rgba(35, 4, 57, 1) 0%, rgba(79, 22, 121, 1) 52%, rgba(57, 5, 75, 1) 100%);
   align-items: center;
   /* background-image: url("./bgg.png"); */
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
   background-position: "fixed";
-  height: 100vh;
+  /* width: 100%; */
+  /* height: 100vh; */
+  /* background-color: ; */
 }
 
 .header {
@@ -59,7 +68,9 @@ body {
   z-index: 100000;
   /* font-family: "HeliosRegular", Arial, sans-serif; */
   color: #d3c1e7;
+  gap: 10px;
 }
+
 .club_name{
   font-size: 0.3em;
 }
@@ -67,6 +78,7 @@ body {
   font-size: 0.2em;
 }
 .header img {
+  /* height: 110vh; */
   position: relative;
 }
 
@@ -90,10 +102,10 @@ body {
   flex-direction: row;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
-  width: max-content;
+  /* width: max-content; */
   left: 50%;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 1vw;
+  padding: 1vw;
   position: fixed;
   justify-content: space-around;
   /* height: 3rem; */
@@ -104,20 +116,20 @@ body {
   animation-fill-mode: forwards;
   animation-duration: 3s;
   animation-timing-function: ease-in;
-  font-size: 2rem;
+  font-size: 1vw;
   z-index: 10000000000;
 
 
 }
 
 nav .nav_elements a {
-  font-size: 1.1rem;
+  font-size: 1vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.3em;
-  padding: 0.5rem;
+  gap: 0.5vw;
+  padding: 0.7vw;
   border-radius: 1.5rem;
   background: transparent;
   /* color: black; */
@@ -149,7 +161,7 @@ nav a svg {
   }
 
   100% {
-    bottom: 5rem;
+    bottom: 4rem;
   }
 }
 
@@ -240,36 +252,52 @@ model-viewer {
   padding:1em 0em;
   margin: 0.3em;
   transition: all 0.5s ease-in-out;
+  word-spacing: 4px;
+  line-height: 1.5em;
+  
 }
 
 
 @media screen and (max-width: 600px) {
-  nav a svg {
-    width: 1.5em;
+  .nav_elements  svg {
+    width: 7vw;
   }
-
-  nav a {
-    font-size: 0.5em;
+  .nav_elements{
+    padding: 3vw;
+    justify-content: space-between;
+    border-radius: 3em;
+  }
+  .nav_elements a {
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    padding: 0.5rem;
+    font-size: 10vw;
+    /* padding: 0.5rem; */
     border-radius: 1rem;
     background: transparent;
     color: black;
     text-decoration: none;
 
   }
-
-  .nav_elements {
-    width: 90%;
+  .nav_elements{
+    width: 70%;
     margin: auto;
-    gap: 0.1rem;
-    justify-content: space-between;
   }
-
+  .nav_elements a{
+    /* width: 90%; */
+    /* padding: 3vw; */
+    font-size: 6vw;
+    
+  }
+  .wlug-logo-purple{
+    width: 40%;
+    right: 0;
+    top: 0;
+    z-index: 10000000;
+    position: absolute;
+  }
   .go_container {
     flex-direction: column;
     width: 90%;
@@ -281,12 +309,15 @@ model-viewer {
     width: 90%;
     margin: auto;
     flex-direction: column-reverse;
+    padding: 0;
   }
 
   .go_session,
   .docker_session {
+
     flex-direction: column;
     width: 100%;
+    /* padding: 0em; */
   }
 
   model-viewer {
@@ -296,7 +327,7 @@ model-viewer {
 
   .header {
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -306,14 +337,15 @@ model-viewer {
     font-family: 'Blackpast' !important;
     
   }
-
+  
   .club_name{
     font-size: 4vw;
   }
   .presents{
     font-size: 3vw;
   }
-
+  
+  
 
 
   #docker {
@@ -330,6 +362,8 @@ model-viewer {
   .go_session2 p,
   .docker_session1 p,
   .docker_session2 p {
+    line-height: 2em;
+    word-spacing: 4px;
     padding: 0.5em;
   }
   .go_session1 ,
@@ -338,6 +372,10 @@ model-viewer {
   .docker_session2 {
     width: 95%;
     margin: 1em auto;
+    padding: 0.5em;
+    border-radius: 1em;
+    font-size: 4vw;
+    
   }
 }
 
