@@ -618,6 +618,7 @@ input {
 
 .text {
   margin-top: 1rem;
+  font-family: "Helios Pro Regular", sans-serif;
 }
 
 button {
@@ -662,7 +663,7 @@ button {
   --b: 3px; /* border thickness */
   --s: 0.45em; /* size of the corner */
   --color: #d3c1e7;
-
+  font-family: "Helios Pro Regular", sans-serif;
   padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
 
   color: var(--color);
