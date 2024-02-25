@@ -973,11 +973,16 @@ input::file-selector-button:hover {
   }
   .qr {
     flex-wrap: wrap;
+    margin-left: 5rem;
+  }
+  .qr .heading{
+    margin-left: 5rem;
   }
   .qr img {
     width: 14rem;
     border-radius: 2rem;
     margin: 1rem auto;
+
   }
   .form {
     margin-left: 2rem;
@@ -998,6 +1003,7 @@ input::file-selector-button:hover {
   .box1 {
     width: 93%;
   }
+  
   button {
     width: 100%;
   }
