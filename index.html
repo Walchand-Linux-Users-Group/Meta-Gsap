@@ -409,6 +409,8 @@
         .then(res => res.json())
         .then(data => {
           loader.style.display = 'none';
+          document.querySelector('.submittext').textContent = 'Submit';
+          submitButton.disabled = false;
           if (data.success) {
             // Show success popup
             Swal.fire({
@@ -455,8 +457,7 @@
               confirmButtonColor: '#8000af'
             });
           }
-          document.querySelector('.submittext').textContent = 'Submit';
-          submitButton.disabled = false;
+          
         })
         .catch(err => {
           loader.style.display = 'none';
