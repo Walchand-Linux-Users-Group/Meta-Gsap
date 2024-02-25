@@ -978,6 +978,9 @@ input::file-selector-button:hover {
   .qr .heading{
     margin-left: 5rem;
   }
+  .button-89{
+    margin-left: 1rem;
+  }
   .qr img {
     width: 14rem;
     border-radius: 2rem;
