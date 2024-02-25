@@ -47,7 +47,7 @@ body {
 
 .title {
   position: relative;
-  z-index: 10000000;
+  z-index: 11;
   font-family: "HeliosRegular";
   align-items: center;
   text-align: center;
@@ -84,7 +84,7 @@ body {
   font-size: 7em;
   font-weight: 900;
   font-family: "Blackpast", sans-serif;
-  z-index: 100000;
+  z-index: 10;
   /* font-family: "HeliosRegular", Arial, sans-serif; */
   color: #d3c1e7;
   gap: 10px;
@@ -145,7 +145,7 @@ body {
   animation-duration: 3s;
   animation-timing-function: ease-in;
   font-size: 1vw;
-  z-index: 5;
+  z-index: 60;
   font-family: "HeliosRegular", Arial, sans-serif;
 }
 
