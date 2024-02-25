@@ -16,6 +16,7 @@
 
   <!--  REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
   <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
   <script>
    window.onload = function () {
@@ -55,7 +56,14 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
     rel="stylesheet" />
-
+     <style>
+          @font-face {
+              font-family: 'HeliosRegular';
+              src: url('./fonts/helios-regular.ttf') format('truetype'); /* Adjust the path to your font file */
+              font-weight: normal;
+              font-style: normal;
+          }
+      </style>
 </head>
 
 <body>
@@ -220,9 +228,8 @@
               <label for="referralCode" class="text">Referral Code (if any):</label>
               <input type="text" id="referralCode" name="referralCode" placeholder="Enter Referral Code" class="box"
                 style="caret-color: white; ">
-
-              <!-- <button class="button-89" role="button" id="submit">Submit</button> -->
-              <input type="submit"  class="button-89" value="Submit" id="submitbutton">
+              <button type="submit" class="button-89" role="button" id="submitbutton"> <div id="loader" class="loader"></div> <span class="submittext">Submit</span></button>
+              <!-- <input type="submit"  class="button-89" value="Submit" id="submitbutton"> -->
             </form>
           </div>
 
@@ -368,6 +375,12 @@
   <script>
     document.getElementById('myForm').addEventListener('submit', function (e) {
       e.preventDefault();
+      const submitButton = document.getElementById('submitbutton');
+      submitButton.disabled = true;
+      document.querySelector('.submittext').textContent = 'Loading...';
+      const loader = document.getElementById('loader');
+      loader.style.display = 'block';
+
       const userFile = document.getElementById('file').files[0];
       const name = document.getElementById('fullName').value;
       const email = document.getElementById('email').value;
@@ -395,18 +408,82 @@
       })
         .then(res => res.json())
         .then(data => {
+          loader.style.display = 'none';
           if (data.success) {
             // Show success popup
-            alert('Your form is submitted successfully!');
+            Swal.fire({
+            fontFamily: 'HeliosRegular',
+            title: "Success!",
+            text: "Your form is submitted successfully!",
+            customClass: {
+            container: 'swal-container',
+            popup: 'swal-popup',
+            header: 'swal-header',
+            title: 'swal-title',
+            closeButton: 'swal-close-button',
+            image: 'swal-image',
+            content: 'swal-content',
+            actions: 'swal-actions',
+            confirmButton: 'swal-button',
+          },
+          background: 'rgba(233, 213, 255, 0.9)', 
+          imageUrl: './success.png',
+          imageHeight: 200, 
+          confirmButtonColor: '#8000af', 
+          confirmButtonText: 'Okay!',
+          });
           } else {
             // Show error popup
-            alert('An error occurred while submitting the form.');
+            Swal.fire({
+              fontFamily: 'HeliosRegular',
+              title: "Error!",
+              text: "An error occurred while submitting the form.",
+              customClass: {
+                container: 'swal-container',
+                popup: 'swal-popup',
+                header: 'swal-header',
+                title: 'swal-title',
+                closeButton: 'swal-close-button',
+                image: 'swal-image',
+                content: 'swal-content',
+                actions: 'swal-actions',
+                confirmButton: 'swal-button'
+              },
+              background: 'rgba(233, 213, 255, 0.9)',
+              imageUrl: './error.png',
+              imageHeight: 200,
+              confirmButtonColor: '#8000af'
+            });
           }
+          document.querySelector('.submittext').textContent = 'Submit';
+          submitButton.disabled = false;
         })
         .catch(err => {
+          loader.style.display = 'none';
           console.log(err);
           // Show error popup
-          alert('An error occurred while submitting the form.');
+          Swal.fire({
+            fontFamily: 'HeliosRegular',
+            title: "Error!",
+            text: "An error occurred while submitting the form.",
+            customClass: {
+            container: 'swal-container',
+            popup: 'swal-popup',
+            header: 'swal-header',
+            title: 'swal-title',
+            closeButton: 'swal-close-button',
+            image: 'swal-image',
+            content: 'swal-content',
+            actions: 'swal-actions',
+            confirmButton: 'swal-button',
+          },
+          background: 'rgba(233, 213, 255, 0.9)', 
+          imageUrl: './error.png', 
+          imageHeight: 200, 
+          confirmButtonColor: '#8000af',    
+          });
+          document.querySelector('.submittext').textContent = 'Submit';
+          submitButton.disabled = false;
         });
     });
   </script>
