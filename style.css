@@ -145,7 +145,7 @@ body {
   animation-duration: 3s;
   animation-timing-function: ease-in;
   font-size: 1vw;
-  z-index: 10000000000;
+  z-index: 5;
   font-family: "HeliosRegular", Arial, sans-serif;
 }
 
@@ -193,7 +193,6 @@ nav a svg {
 .go_container,
 .docker_container {
   position: relative;
-  z-index: 10;
   display: flex;
   width: 90%;
   margin: 0.5em auto;
@@ -764,10 +763,14 @@ input::file-selector-button:hover {
   padding: 4rem 0;
   border-radius: 1em;
   position: relative;
-  z-index: 10000000000000;
+  z-index: 6;
   background-color: rgba(10, 4, 35, 2);
   max-height: 20%;
   font-family: "HeliosRegular", Arial, sans-serif;
+}
+
+.swal-container {
+  z-index: 10000;
 }
 
 .logo-icon-container {
@@ -1103,7 +1106,7 @@ select::placeholder {
 .loader {
   display: none;
   border: 3px solid #f3f3f3;
-  border-top: 3px solid #e9d5ff;
+  border-top: 3px solid #d818ff;
   border-radius: 50%;
   width: 1rem;
   height: 1rem;

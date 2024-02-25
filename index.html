@@ -434,6 +434,15 @@
           confirmButtonColor: '#8000af', 
           confirmButtonText: 'Okay!',
           });
+          document.getElementById('fullName').value = '';
+          document.getElementById('email').value = '';
+          document.getElementById('mobile').value = '';
+          document.getElementById('college').value = '';
+          document.getElementById('yearOfStudy').value = '';
+          document.getElementById('technology').value = 'both';
+          document.getElementById('referralCode').value = '';
+          const fileInput = document.getElementById('file');
+          fileInput.value = '';
           } else {
             // Show error popup
             Swal.fire({
