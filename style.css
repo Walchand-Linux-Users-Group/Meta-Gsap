@@ -236,7 +236,7 @@ model-viewer {
 .docker_session1:hover {
   background-color: rgba(10, 4, 35, 0.9);
   backdrop-filter: blur(20px);
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 /* 
