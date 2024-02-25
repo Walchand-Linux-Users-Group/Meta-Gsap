@@ -767,6 +767,7 @@ input::file-selector-button:hover {
   background-color: rgba(10, 4, 35, 2);
   max-height: 20%;
   font-family: "HeliosRegular", Arial, sans-serif;
+  z-index: 1000;
 }
 
 .swal-container {
