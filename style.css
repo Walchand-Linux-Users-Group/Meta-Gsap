@@ -1192,3 +1192,35 @@ select::placeholder {
     transform: scale(0);
   }
 }
+
+/*Sponsors*/
+.backed{
+  position: relative;
+  z-index: 100;
+  text-align: center;
+  font-size: 1.3em;
+  font-family: 'HeliosRegular';
+  font-weight: 500;
+  color: #d3c1e7;
+}
+.sponsors{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+  position: relative;
+  z-index: 12;
+}
+.sponsors img{
+  width: 350px;
+  margin: auto;
+}
+
+
+@media (width<370px){
+  .sponsors img{
+    width: 100%;
+      margin-left: 0.6em;
+  }
+}
