@@ -1071,6 +1071,9 @@ input::file-selector-button:hover {
   .policies {
     margin-top: 1rem;
   }
+  .forms_closed{
+    font-size: 3vw;
+  }
 }
 /*Footer End*/
 
@@ -1224,3 +1227,20 @@ select::placeholder {
       margin-left: 0.6em;
   }
 }
+
+
+.forms_closed{
+  font-family: "HeliosRegular";
+  position: relative;
+  z-index: 24;
+  color: #d3c1e7;
+  text-align: center;
+  /* background-image: url("bg.png"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 2em;
+  /* background-color: rgba(255,255,255,0.3); */
+}
+
